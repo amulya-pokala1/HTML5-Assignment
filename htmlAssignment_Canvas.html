@@ -1,0 +1,45 @@
+<html>
+    <head>
+<title>HTML Assignment</title>
+    </head>
+    <body>
+        <canvas height="1000" width="1000" id="drawingBoard"></canvas>
+
+    </body>
+    <script>
+        function drawLine(){
+            var board=document.getElementById("drawingBoard");
+            var context=board.getContext("2d");
+            context.moveTo(0,0);
+            context.lineTo(100,200);
+            context.stroke();
+        }
+        function drawCircle()
+        {
+            var board=document.getElementById("drawingBoard");
+            var context=board.getContext("2d");
+            context.beginPath();
+            context.arc(200,50,40,0,2*Math.PI);
+            context.stroke();
+        }
+        function writeText(){
+            var board=document.getElementById("drawingBoard");
+            var context=board.getContext("2d");
+            context.font = "30px Arial";
+            context.fillText("Never give up even if you want to, ",300,50); 
+
+        }
+        function writeTextTransparent(){
+            var board=document.getElementById("drawingBoard");
+            var context=board.getContext("2d");
+            context.font = "30px Arial";
+            context.strokeText("the Universe falls in love with stubborn people!!",380,80);        
+        }
+        
+        drawLine();
+        drawCircle();
+        writeText();
+        writeTextTransparent();
+        </script>
+
+</html>
